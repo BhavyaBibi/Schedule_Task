@@ -1,7 +1,11 @@
 from http.client import REQUESTED_RANGE_NOT_SATISFIABLE
+from urllib import request
 import schedule
 import time
 import requests
+url ="http://codeforces.com/api/contest.list"
+page =request.get(url)
+data =page.json()
 
 def job():
     print("im working")
